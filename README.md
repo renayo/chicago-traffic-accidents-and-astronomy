@@ -2,6 +2,9 @@
 
 Data source:  https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if/about_data
 
+All files including the large data files and model.pkl:  https://www.dropbox.com/scl/fo/wbfaw4ldii5bq8iimeb6a/ALloKkGhNRJmlkQIG6UIKLA?rlkey=ep82d3o937wq2fuy4wfweeept&st=6i0enwk6&dl=0
+
+
 # Chicago Car Accidents Astrological Prediction Analysis
 ## Machine Learning Model Performance Report
 
