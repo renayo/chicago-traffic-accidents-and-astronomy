@@ -42,20 +42,18 @@ The following 19 celestial features were computed for each hour:
 3. **Moon Longitude** - Lunar ecliptic position
 4. **Moon Distance** - Distance from Earth in Earth radii
 5. **Moon Phase** - Illumination percentage (0-1)
-6. **Mercury Retrograde** - Binary retrograde indicator
-7. **Eclipse Proximity** - Within 2 weeks of eclipse (binary)
-8. **Mercury Longitude** - Mercury's ecliptic position
-9. **Venus Longitude** - Venus's ecliptic position
-10. **Mars Longitude** - Mars's ecliptic position
-11. **Jupiter Longitude** - Jupiter's ecliptic position
-12. **Saturn Longitude** - Saturn's ecliptic position
-13. **Uranus Longitude** - Uranus's ecliptic position
-14. **Neptune Longitude** - Neptune's ecliptic position
-15. **Pluto Longitude** - Pluto's ecliptic position
-16. **Eris Longitude** - Dwarf planet Eris position
-17. **Sedna Longitude** - Trans-Neptunian object position
-18. **Pholus Longitude** - Centaur asteroid position
-19. **Nessus Longitude** - Centaur asteroid position
+6. **Mercury Longitude** - Mercury's ecliptic position
+7. **Venus Longitude** - Venus's ecliptic position
+8. **Mars Longitude** - Mars's ecliptic position
+9. **Jupiter Longitude** - Jupiter's ecliptic position
+10. **Saturn Longitude** - Saturn's ecliptic position
+11. **Uranus Longitude** - Uranus's ecliptic position
+12. **Neptune Longitude** - Neptune's ecliptic position
+13. **Pluto Longitude** - Pluto's ecliptic position
+14. **Eris Longitude** - Dwarf planet Eris position
+15. **Sedna Longitude** - Trans-Neptunian object position
+16. **Pholus Longitude** - Centaur asteroid position
+17. **Nessus Longitude** - Centaur asteroid position
 
 ---
 
