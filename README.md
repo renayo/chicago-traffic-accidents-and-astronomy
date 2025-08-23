@@ -26,9 +26,7 @@ This report presents the results of applying astrological feature analysis to pr
 
 ### Temporal Coverage
 The dataset encompasses nearly 10 years of hourly accident data (84,987 hours ≈ 9.7 years), providing robust coverage across multiple celestial cycles including:
-- Multiple Mercury retrograde periods
 - Numerous lunar cycles
-- Several eclipse seasons
 - Complete planetary orbital positions
 
 ---
