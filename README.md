@@ -198,6 +198,12 @@ With an average of 11.5 accidents per hour and RMSE of 4.97:
 
 5. **Temporal Analysis**: Conduct time-series decomposition to separate astrological from purely temporal effects
 
+
+With respect to the fifth recommendation, the best fit time series is an ARProcess[17.0276, {0.988152, 0.0390293, 0.0466251, -0.193726}, 535.826].
+Its' plot of its fit residuals: <img width="480" height="295" alt="image" src="https://github.com/user-attachments/assets/582c2120-880b-466d-9c65-79521d11ce68" />
+and its ACF plot is here: <img width="480" height="279" alt="image" src="https://github.com/user-attachments/assets/e9dffb6b-8959-4a16-93ed-c3bac75f5893" />
+
+
 ---
 
 *Report Generated: Analysis of Chicago Car Accidents Using Astrological Features*  
