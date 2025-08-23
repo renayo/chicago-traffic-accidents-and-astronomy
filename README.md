@@ -202,4 +202,4 @@ With an average of 11.5 accidents per hour and RMSE of 4.97:
 
 *Report Generated: Analysis of Chicago Car Accidents Using Astrological Features*  
 *Model Performance: R² = 0.642, RMSE = 4.97 accidents/hour*  
-*Dataset: 84,987 hourly records with 19 astrological features*
+*Dataset: 84,987 hourly records with 17 astrological features*
