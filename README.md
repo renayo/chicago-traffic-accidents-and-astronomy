@@ -16,6 +16,16 @@ This report presents the results of applying astrological feature analysis to pr
 
 ---
 
+Histogram of hourly accidents:
+<img width="480" height="291" alt="image" src="https://github.com/user-attachments/assets/b236f895-e4f8-4bc4-a211-fe95afa4bc59" />
+
+Histogram of predicted accidents:
+<img width="480" height="291" alt="image" src="https://github.com/user-attachments/assets/07c93725-3a14-4141-b75e-20e2105e3887" />
+
+Histogram of the individual differences:
+<img width="480" height="291" alt="image" src="https://github.com/user-attachments/assets/b5a81338-86e8-4e8f-8611-35e1c9ba4c9d" />
+
+
 ## Dataset Overview
 
 ### Data Statistics
