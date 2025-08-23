@@ -22,7 +22,7 @@ This report presents the results of applying astrological feature analysis to pr
 - **Total Hourly Records Analyzed**: 84,987
 - **Average Accidents per Hour**: 11.50
 - **Maximum Accidents in Single Hour**: 141
-- **Feature Dimensions**: 19 astrological variables
+- **Feature Dimensions**: 17 astrological variables
 
 ### Temporal Coverage
 The dataset encompasses nearly 10 years of hourly accident data (84,987 hours ≈ 9.7 years), providing robust coverage across multiple celestial cycles including:
@@ -35,7 +35,7 @@ The dataset encompasses nearly 10 years of hourly accident data (84,987 hours �
 
 ## Astrological Features Analyzed
 
-The following 19 celestial features were computed for each hour:
+The following 17 celestial features were computed for each hour:
 
 1. **Ascendant** - Rising sign degree at Chicago coordinates
 2. **Sun Longitude** - Solar ecliptic position (0-360°)
