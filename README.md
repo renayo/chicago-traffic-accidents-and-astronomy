@@ -1,217 +1,178 @@
-# chicago-traffic-accidents-and-astronomy
-
-# Chicago Car Accidents Astrological Prediction Analysis
-## Machine Learning Model Performance Report
+# Chicago Traffic Accidents & Astronomical Patterns
+## A Data-Driven Analysis of Celestial Correlations with Road Safety
 
 ---
 
-## Executive Summary
+## Executive Overview
 
-This report presents the results of applying astrological feature analysis to predict hourly car accident volumes in Chicago. Using 19 astrological features including planetary positions, lunar phases, and celestial longitudes, we developed machine learning models that achieved significant predictive accuracy with an R² score of 0.642 on test data.
-
----
-
-Histogram of hourly accidents:
-<img width="480" height="291" alt="image" src="https://github.com/user-attachments/assets/b236f895-e4f8-4bc4-a211-fe95afa4bc59" />
-
-Histogram of predicted accidents:
-<img width="480" height="291" alt="image" src="https://github.com/user-attachments/assets/07c93725-3a14-4141-b75e-20e2105e3887" />
-
-Histogram of the individual differences:
-<img width="480" height="291" alt="image" src="https://github.com/user-attachments/assets/b5a81338-86e8-4e8f-8611-35e1c9ba4c9d" />
-
-
-## Dataset Overview
-
-### Data Statistics
-- **Total Hourly Records Analyzed**: 84,987
-- **Average Accidents per Hour**: 11.50
-- **Maximum Accidents in Single Hour**: 141
-- **Feature Dimensions**: 17 astrological variables
-
-### Temporal Coverage
-The dataset encompasses nearly 10 years of hourly accident data (84,987 hours ≈ 9.7 years), providing robust coverage across multiple celestial cycles including:
-- Numerous lunar cycles
-- Complete planetary orbital positions
+This analysis explores potential correlations between astronomical positions and hourly traffic accident volumes in Chicago. Using machine learning techniques applied to nearly 10 years of accident data (84,987 hourly records), we developed predictive models incorporating 17 astronomical features. Our best-performing model achieved an R² score of 0.642, demonstrating notable predictive capability while raising intriguing questions about temporal patterns in accident data.
 
 ---
 
-## Astrological Features Analyzed
+## Key Findings
 
-The following 17 celestial features were computed for each hour:
+### Performance Metrics
+- **Model Accuracy**: R² = 0.642 (explaining 64.2% of variance in accident patterns)
+- **Prediction Error**: RMSE = 4.97 accidents per hour
+- **Dataset Scale**: 84,987 hourly observations spanning approximately 9.7 years
+- **Average Accident Rate**: 11.5 accidents per hour (Chicago metropolitan area)
+- **Peak Hour Maximum**: 141 accidents recorded in a single hour
 
-1. **Ascendant** - Rising sign degree at Chicago coordinates
-2. **Sun Longitude** - Solar ecliptic position (0-360°)
-3. **Moon Longitude** - Lunar ecliptic position
-4. **Moon Distance** - Distance from Earth in Earth radii
-5. **Moon Phase** - Illumination percentage (0-1)
-6. **Mercury Longitude** - Mercury's ecliptic position
-7. **Venus Longitude** - Venus's ecliptic position
-8. **Mars Longitude** - Mars's ecliptic position
-9. **Jupiter Longitude** - Jupiter's ecliptic position
-10. **Saturn Longitude** - Saturn's ecliptic position
-11. **Uranus Longitude** - Uranus's ecliptic position
-12. **Neptune Longitude** - Neptune's ecliptic position
-13. **Pluto Longitude** - Pluto's ecliptic position
-14. **Eris Longitude** - Dwarf planet Eris position
-15. **Sedna Longitude** - Trans-Neptunian object position
-16. **Pholus Longitude** - Centaur asteroid position
-17. **Nessus Longitude** - Centaur asteroid position
+### Visual Analysis
+
+**Distribution of Actual Hourly Accidents**
+<img width="480" height="291" alt="Actual accident distribution" src="https://github.com/user-attachments/assets/b236f895-e4f8-4bc4-a211-fe95afa4bc59" />
+
+**Model Predictions Distribution**
+<img width="480" height="291" alt="Predicted accident distribution" src="https://github.com/user-attachments/assets/07c93725-3a14-4141-b75e-20e2105e3887" />
+
+**Prediction Accuracy (Residuals)**
+<img width="480" height="291" alt="Prediction accuracy" src="https://github.com/user-attachments/assets/b5a81338-86e8-4e8f-8611-35e1c9ba4c9d" />
 
 ---
 
-## Model Performance Results
+## Methodology
 
-### Random Forest Regressor (Best Performing Model)
+### Astronomical Features Analyzed
 
-#### Performance Metrics
+We computed 17 astronomical measurements for each hour of accident data:
+
+#### Primary Solar-Lunar Features
+- **Ascendant**: The ecliptic degree rising on the eastern horizon at Chicago's coordinates
+- **Sun Longitude**: Solar position along the ecliptic (0-360°)
+- **Moon Longitude**: Lunar ecliptic position
+- **Moon Distance**: Earth-Moon distance in Earth radii
+- **Moon Phase**: Lunar illumination percentage (0-1 scale)
+
+#### Planetary Positions (Ecliptic Longitude)
+- **Inner Planets**: Mercury, Venus, Mars
+- **Gas Giants**: Jupiter, Saturn
+- **Outer Planets**: Uranus, Neptune, Pluto
+
+#### Trans-Neptunian and Minor Bodies
+- **Eris**: Dwarf planet in the scattered disc
+- **Sedna**: Distant trans-Neptunian object
+- **Pholus & Nessus**: Centaur asteroids with eccentric orbits
+
+---
+
+## Model Performance Analysis
+
+### Random Forest Regressor (Optimal Model)
+
+| Metric | Value | Interpretation |
+|--------|-------|----------------|
+| Test R² | 0.642 | Strong predictive capability |
+| Training R² | 0.746 | Minimal overfitting observed |
+| Test RMSE | 4.97 | ±5 accidents typical error range |
+| Test MAE | 3.62 | Average absolute deviation |
+| Cross-Validation RMSE | 5.01 | Consistent across data splits |
+
+### Gradient Boosting Regressor (Alternative Model)
+
 | Metric | Value |
 |--------|-------|
-| **Test RMSE** | 4.97 accidents/hour |
-| **Test MAE** | 3.62 accidents/hour |
-| **Test R²** | 0.642 |
-| **Training R²** | 0.746 |
-| **Cross-Validation RMSE** | 5.01 accidents/hour |
-
-#### Key Insights
-- The model explains **64.2%** of the variance in hourly accident counts
-- Average prediction error of approximately 5 accidents per hour
-- Minimal overfitting (Train R² = 0.746 vs Test R² = 0.642)
-- Consistent cross-validation performance confirms model stability
-
-### Gradient Boosting Regressor
-
-#### Performance Metrics
-| Metric | Value |
-|--------|-------|
-| **Test RMSE** | 5.23 accidents/hour |
-| **Test MAE** | 3.84 accidents/hour |
-| **Test R²** | 0.603 |
-| **Training R²** | 0.653 |
-| **Cross-Validation RMSE** | 5.26 accidents/hour |
+| Test R² | 0.603 |
+| Test RMSE | 5.23 |
+| Cross-Validation RMSE | 5.26 |
 
 ---
 
 ## Feature Importance Analysis
 
-### Top 10 Most Influential Astrological Features (Random Forest)
+### Most Influential Astronomical Variables
 
-| Rank | Feature | Importance Score | Interpretation |
-|------|---------|-----------------|----------------|
-| 1 | **Ascendant** | 0.3277 | Rising sign has strongest correlation with accident timing |
-| 2 | **Sun Longitude** | 0.2518 | Solar position significantly influences accident patterns |
-| 3 | **Uranus Longitude** | 0.1381 | Uranus position shows unexpected strong influence |
-| 4 | **Mercury Longitude** | 0.0762 | Mercury's position moderately affects accidents |
-| 5 | **Venus Longitude** | 0.0258 | Minor but measurable Venus influence |
-| 6 | **Nessus Longitude** | 0.0249 | Centaur asteroid shows surprising relevance |
-| 7 | **Pholus Longitude** | 0.0210 | Another centaur with minor influence |
-| 8 | **Jupiter Longitude** | 0.0178 | Jupiter's position has small effect |
-| 9 | **Moon Distance** | 0.0173 | Lunar distance shows minimal correlation |
-| 10 | **Eris Longitude** | 0.0170 | Dwarf planet Eris has slight influence |
+| Rank | Feature | Importance | Key Insight |
+|------|---------|------------|-------------|
+| 1 | **Ascendant** | 32.8% | Strongest predictor; changes every ~2 hours |
+| 2 | **Sun Longitude** | 25.2% | Captures daily and seasonal cycles |
+| 3 | **Uranus Longitude** | 13.8% | Unexpected significance; suggests long-term patterns |
+| 4 | **Mercury Longitude** | 7.6% | Moderate influence on predictions |
+| 5 | **Venus Longitude** | 2.6% | Minor but measurable effect |
+| 6 | **Nessus Longitude** | 2.5% | Centaur asteroid shows statistical relevance |
+| 7 | **Pholus Longitude** | 2.1% | Secondary centaur influence |
+| 8 | **Jupiter Longitude** | 1.8% | Minimal but consistent correlation |
+| 9 | **Moon Distance** | 1.7% | Lower than anticipated influence |
+| 10 | **Eris Longitude** | 1.7% | Dwarf planet shows slight correlation |
 
-### Key Observations
+### Statistical Observations
 
-1. **Dominant Features**: The Ascendant and Sun longitude together account for nearly 58% of the model's predictive power
-2. **Outer Planets**: Uranus shows surprisingly high importance (13.8%), suggesting long-term cyclical patterns
-3. **Minor Bodies**: Centaurs (Nessus, Pholus) show measurable influence despite their distance
-4. **Moon Metrics**: Interestingly, moon distance and phase showed lower importance than expected
+1. **Dominant Predictors**: Ascendant and Sun longitude collectively account for 58% of model importance
+2. **Unexpected Pattern**: Uranus's high importance (13.8%) warrants further investigation
+3. **Lunar Factors**: Moon phase and distance showed surprisingly low predictive value
+4. **Minor Bodies**: Measurable influence from trans-Neptunian objects despite extreme distances
 
 ---
 
-## Statistical Significance
+## Time Series Decomposition
 
-### Model Validation
-- **Cross-validation RMSE** closely matches test RMSE (5.01 vs 4.97)
-- **Consistent performance** across 5-fold cross-validation
-- **R² of 0.642** indicates strong predictive capability beyond random chance
+To distinguish astronomical correlations from pure temporal patterns, we conducted autoregressive time series analysis:
 
-### Practical Implications
-With an average of 11.5 accidents per hour and RMSE of 4.97:
-- Model predictions are typically within ±5 accidents of actual values
-- 68% of predictions fall within one RMSE of actual values
-- 95% of predictions fall within two RMSEs (±10 accidents)
+**AR Process Parameters**: ARProcess[17.0276, {0.988152, 0.0390293, 0.0466251, -0.193726}, 535.826]
+
+**Residual Analysis**
+<img width="480" height="295" alt="Time series residuals" src="https://github.com/user-attachments/assets/582c2120-880b-466d-9c65-79521d11ce68" />
+
+**Autocorrelation Function**
+<img width="480" height="279" alt="ACF plot" src="https://github.com/user-attachments/assets/e9dffb6b-8959-4a16-93ed-c3bac75f5893" />
+
+---
+
+## Interpretation & Implications
+
+### Scientific Context
+
+While our model demonstrates significant predictive accuracy, it's crucial to note that **correlation does not imply causation**. The astronomical features likely serve as sophisticated temporal markers rather than causal factors. The high importance of the Ascendant and Sun longitude particularly suggests these features effectively encode:
+
+- Time-of-day variations in traffic patterns
+- Seasonal fluctuations in accident rates
+- Complex periodic cycles in urban mobility
+
+### Practical Applications
+
+1. **Resource Allocation**: Emergency services could use predictions to optimize deployment during high-risk periods
+2. **Pattern Recognition**: Identified cycles may reveal underlying traffic flow dynamics
+3. **Predictive Framework**: Model provides baseline for comparing other predictive approaches
+
+### Areas for Further Research
+
+1. **Uranus Correlation Investigation**: The 13.8% importance of Uranus longitude merits dedicated analysis
+2. **Mechanism Exploration**: Decompose which temporal patterns align with specific astronomical cycles
+3. **Geographic Validation**: Test model transferability to other metropolitan areas
+4. **Feature Engineering**: Explore planetary aspects and angular relationships
+
+---
+
+## Technical Implementation
+
+### Model Configuration
+- **Algorithm**: Random Forest with 200 estimators
+- **Validation**: 5-fold cross-validation
+- **Data Split**: 80% training (67,990 records), 20% testing (16,997 records)
+- **Feature Scaling**: StandardScaler normalization
+
+### Deliverables
+- Trained model (`accident_astro_model.pkl`)
+- Feature dataset (`astrological_features.csv`)
+- Prediction results (`predictions.csv`)
+- Complete codebase and documentation
+
+---
+
+## Data Sources & Resources
+
+- **Source Data**: [Chicago Traffic Crashes Database](https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if/about_data)
+- **Complete Project Files**: [Dropbox Repository](https://www.dropbox.com/scl/fo/wbfaw4ldii5bq8iimeb6a/ALloKkGhNRJmlkQIG6UIKLA?rlkey=ep82d3o937wq2fuy4wfweeept&st=6i0enwk6&dl=0)
 
 ---
 
 ## Conclusions
 
-### Major Findings
+This analysis reveals statistically significant correlations between astronomical positions and Chicago traffic accident patterns, with our model achieving 64.2% variance explanation. While the mechanisms underlying these correlations remain to be fully understood, the model's predictive accuracy offers practical value for traffic safety management and resource planning.
 
-1. **Astrological features demonstrate statistically significant predictive power** for hourly accident volumes with R² = 0.642
-
-2. **Local astronomical conditions** (Ascendant) show the strongest correlation with accident patterns, suggesting time-of-day and seasonal effects captured through celestial mechanics
-
-3. **Solar position** (Sun longitude) is the second most important predictor, likely capturing seasonal and daily cycles
-
-4. **Outer planet positions** (particularly Uranus) show unexpected importance, potentially indicating longer-term cyclical patterns in accident data
-
-5. **Model performance** (RMSE ≈ 5 accidents/hour) provides actionable prediction accuracy for resource allocation
-
-### Limitations and Considerations
-
-- Correlation does not imply causation; celestial positions may serve as proxies for temporal patterns
-- The high importance of Ascendant and Sun longitude suggests strong time-based patterns
-- Further analysis needed to separate pure astrological effects from temporal correlations
+The unexpected importance of certain astronomical features, particularly Uranus's position, presents intriguing questions for future research. Whether these patterns reflect complex temporal cycles, subtle environmental influences, or statistical artifacts, they demonstrate the value of exploring unconventional approaches to traffic safety analysis.
 
 ---
 
-## Technical Details
-
-### Model Configuration
-
-**Random Forest Parameters:**
-- Estimators: 200
-- Max Depth: 15
-- Min Samples Split: 5
-- Min Samples Leaf: 2
-- Random State: 42
-
-**Data Split:**
-- Training Set: 80% (67,990 records)
-- Test Set: 20% (16,997 records)
-- Cross-Validation: 5-fold
-
-### Output Files Generated
-
-1. `astrological_features.csv` - Complete feature dataset
-2. `accident_astro_model.pkl` - Trained Random Forest model
-3. `feature_scaler.pkl` - StandardScaler for feature normalization
-4. `feature_columns.pkl` - Feature name mapping
-5. `predictions.csv` - Test set predictions vs actual values
-
----
-
-## Recommendations
-
-1. **Operational Use**: Consider incorporating astrological features as supplementary predictors in accident forecasting models
-
-2. **Resource Allocation**: Use predictions to optimize emergency response deployment during high-risk celestial configurations
-
-3. **Further Research**: Investigate the mechanism behind Uranus longitude's high importance score
-
-4. **Feature Engineering**: Explore additional astrological aspects and planetary angles for improved accuracy
-
-5. **Temporal Analysis**: Conduct time-series decomposition to separate astrological from purely temporal effects
-
----
-
-With respect to the fifth recommendation, the best fit time series is an ARProcess[17.0276, {0.988152, 0.0390293, 0.0466251, -0.193726}, 535.826].
-
-Its plot of fit residuals is: <img width="480" height="295" alt="image" src="https://github.com/user-attachments/assets/582c2120-880b-466d-9c65-79521d11ce68" />
-
-and its ACF plot is here: <img width="480" height="279" alt="image" src="https://github.com/user-attachments/assets/e9dffb6b-8959-4a16-93ed-c3bac75f5893" />
-
- 
----
-
-
-Data source:  https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if/about_data
-
-All files including the large data files and model.pkl (too large for Github):  https://www.dropbox.com/scl/fo/wbfaw4ldii5bq8iimeb6a/ALloKkGhNRJmlkQIG6UIKLA?rlkey=ep82d3o937wq2fuy4wfweeept&st=6i0enwk6&dl=0
-
-
----
-
-*Report Generated: Analysis of Chicago Car Accidents Using Astrological Features*  
-*Model Performance: R² = 0.642, RMSE = 4.97 accidents/hour*  
-*Dataset: 84,987 hourly records with 17 astrological features*
+*Analysis Period: ~9.7 years | Sample Size: 84,987 hourly records | Model Performance: R² = 0.642*  
+*Chicago, Illinois Metropolitan Area Traffic Data*
