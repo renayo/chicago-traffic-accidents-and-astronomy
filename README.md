@@ -177,7 +177,7 @@ The random forest model provides several performance metrics that allow for a mo
 
 *Cross-Val RMSE (34.72 ±8.63):* This metric is crucial because it indicates the model's generalization ability on unseen data. The value is a measure of the average RMSE across multiple folds of cross-validation, and the standard deviation (±8.63) gives a sense of the model's stability. The fact that the cross-validation RMSE is close to the regular RMSE suggests the model is not overfitting and will perform similarly on new data.
 
-### Conclusion
+### Evaluation of Comparison
 The random forest model provides a quantitative measure of its predictive ability, explaining a significant portion of the variance in the data and showing good performance on unseen data. In contrast, the provided time series model is a simple white noise process that lacks the ability to capture any underlying patterns, making it a poor choice for prediction. Thus, the random forest is demonstrably superior for this task.
 
 ## Conclusions
