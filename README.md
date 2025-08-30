@@ -154,9 +154,7 @@ While our model demonstrates significant predictive accuracy, it's crucial to no
 
 ## Comparison to Time Series Best Fit Model
 
-The best fit is MAProcess[11.5993, {}, 68.9079].
-
-The time series model, specified as MAProcess[11.5993, {}, 68.9079], is an MA (Moving Average) model used for forecasting time series data. The parameters are as follows:
+The best fit time series model, specified as MAProcess[11.5993, {}, 68.9079], is an MA (Moving Average) model used for forecasting time series data. The parameters are as follows:
 
 The first parameter, 11.5993, represents the mean of the time series.
 
