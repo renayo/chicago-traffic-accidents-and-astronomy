@@ -108,7 +108,7 @@ We computed 17 astronomical measurements for each hour of accident data:
 
 ### Scientific Context
 
-While our model demonstrates significant predictive accuracy, it's crucial to note that **correlation does not imply causation**. The astronomical features likely serve as sophisticated temporal markers rather than causal factors. The high importance of the Ascendant and Sun longitude particularly suggests these features effectively encode:
+While our model demonstrates significant predictive accuracy, it's crucial to note that **correlation does not imply causation**. The astronomical features likely serve as sophisticated temporal markers rather than causal factors. Of course, most astrologers would not say otherwise. The high importance of the Ascendant and Sun longitude particularly suggests these features effectively encode:
 
 - Time-of-day variations in traffic patterns
 - Seasonal fluctuations in accident rates
